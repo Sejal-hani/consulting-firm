@@ -1,6 +1,37 @@
 .services__top-content {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
+}
+.services__top-content h3 {
+  color: var(--primary-color) !important;
+}
+
+
+.services__top-content .subtitle {
+  margin-bottom: 6px; /* reduce gap below "Our Services" */
+}
+
+.services__top-content h2 {
+  margin-top: 0;      /* remove default top margin */
+}
+
+
+.services__top-content h2 {
+  margin-bottom: 6px;
+}
+
+.services__top-content h3 {
+  margin-top: 0;
+}
+
+body.dark .services__top-content h3 {
+  font-size: 2.4rem;
+  color: #379cf6;
+}
+
+body.light .services__top-content h3 {
+  color: #816aff;
+  font-size: 2.4rem;
 }
 
 .services__item-wrapper {
@@ -11,6 +42,7 @@
   gap: 15px;
 }
 
+
 .services__item {
   background: var(--card-bg);
   width: 22%;
@@ -19,7 +51,24 @@
   border-radius: 0.5rem;
   margin-bottom: 20px;
   border: 1px solid var(--primary-color);
+
+  
+  border: 1.5px solid rgba(48, 28, 161, 0.61);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
 }
+
+
+body.light .services__item:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 14px 32px rgba(129, 106, 255, 0.35);
+}
+
+
+.services__item .description {
+  color: var(--text-color);
+}
+
+
 
 .services__item-icon {
   width: 60px;

@@ -1,9 +1,7 @@
-
 .header{ 
     width: 100%;
     height: 80px;
     line-height: 80px;
-
 }
 
 .nav__wrapper{
@@ -11,6 +9,7 @@
     align-items: center;
     justify-content: space-between;
 }
+
 /* 
 .menu{
     display:flex;
@@ -19,7 +18,6 @@
     list-style: none;
      line-height: 80px;
       height: 30px;
-
 } */
 
 .menu {
@@ -27,30 +25,33 @@
     align-items: center;
     column-gap: 2.7rem;
     list-style: none;
-    margin: 0; /* Add this to remove default ul margin */
-    padding: 0; /* Add this to remove default ul padding */
+    margin: 0;
+    padding: 0;
 }
+
 .menu__link{
     font-weight: 400;
     font-size: .9rem;
     cursor:pointer;
+    color: var(--text-color);
 }
 
 .menu__link:hover{
     color: var(--link-active);
-
 }
 
 .logo h2{
     color: var(--primary-color)
 }
 
+/* 🔧 FIX IS HERE */
 .light__mode span{
-    color : #fff;
+    color: var(--text-color);   /* ← was #fff */
     display: flex;
     align-items: center;
     column-gap: .4rem;
     font-size: .8rem;
+    cursor: pointer;
 }
 
 .header__shrink{

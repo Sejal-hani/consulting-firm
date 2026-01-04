@@ -1,12 +1,11 @@
 .hero__wrapper{
     display: flex;
     justify-content: space-between;
-
 }
 
 .hero__content, 
 .hero__img{
-width: 50%;
+    width: 50%;
 }
 
 .hero__content{
@@ -16,11 +15,18 @@ width: 50%;
 .hero__content h2 {
     font-size: 3rem;
     line-height: 65px;
-} 
+    color: var(--text-color);
+}
+
+/* 🔥 restore special brand color */
+.hero__content h2.highlight {
+    color: var(--primary-color);
+}
 
 .hero__content p{
     margin-top: 40px;
     font-size : 1.1rem;
+    color: var(--text-color);
 } 
 
 .highlight{
@@ -30,26 +36,45 @@ width: 50%;
 .hero__btns{
     margin-top: 40px;
     display: flex;
-    align-items: centre;
+    align-items: center;
     column-gap: 2rem;
 }
 
-.primary__btn, .secondary__btn{
+/* 🔧 FIX: buttons visible in both themes */
+.primary__btn, 
+.secondary__btn{
     padding: 0.6rem 1.5rem;
     border:none;
     outline:none;
-    outline:none;
-    color:#fff;
     border-radius: 0.2rem;
+    cursor: pointer;
+    color: var(--link-active);
 }
 
+/* primary */
 .primary__btn{
     background: var(--secondary-bg);
-    border:1px solid var(--btn-primary-bg);
-
+    border:1px solid var(--link-active);
 }
 
+/* secondary */
 .secondary__btn{
-    background: var(--primary-bg)
-
+    background: var(--primary-bg);
 }
+
+/* 🔧 FIX: sync image transition with background */
+.hero__image{
+    width: 100%;
+    transition: opacity 0.0s ease;
+}
+
+body.dark .hero__img img {
+    height: 75%;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+body {
+  transition: color 0.2s ease;
+}
+

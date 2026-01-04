@@ -1,20 +1,13 @@
 /* About.css - CORRECTED VERSION */
 
-
-
-
-
 .choose__item-wrapper {
     margin-top: 20px;
-    /* display: flex;
-    flex-direction: column;
-    row-gap: 1rem; */
 }
 
 .choose__us-item {
     padding: 20px 20px 20px 0px;
     display: flex;
-    column-gap: 1rem ;
+    column-gap: 1rem;
     margin-top: 15px;
     align-items: flex-start;
 }
@@ -27,9 +20,8 @@
     justify-content: center;
     padding: 0px 24px;
     border: 1px solid var(--primary-color);
-    /* background: var(--primary-color); */
-      border-radius: 5px; 
-      margin-top: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
 .choose__us-icon i {
@@ -38,27 +30,23 @@
 }
 
 .choose__us-title{
-  color: #fff;
+  color: var(--heading-color); /* ✅ FIX */
   font-weight: 500;
   margin-top: 0px;
   font-size: 1rem;
-
-
 }
 
 .choose__text {
   display: flex;
   flex-direction: column;
-  gap: 0px;  /* space between title and description */
+  gap: 0px;
 }
-
 
 .choose__description{
   color: var(--small-text-color);
   font-size: 0.9rem;
   line-height: 20px;
   margin-top: 2px;
-  
 }
 
 .about__img{
@@ -70,44 +58,38 @@
   height: auto;
   border-radius: 0.8rem;
   object-fit: cover;
-
-  transform: translate(20px, 190px); /* right, down */
+  transform: translate(20px, 190px);
 }
 
-
 .about__content {
-   padding-top: 100px; 
+  padding-top: 100px;
   flex: 1;
 }
 
 .about__content h3 {
   font-size: 2em;
-  color: var(--primary-color)
-  
+  color: var(--primary-color);
 }
 
 .about__content h2 {
   font-size: 2em;
   margin-top: -13px;
   font-weight: 500;
-  font-style: bold;
-  
 }
+
 .about__content .description{
   margin-top: 9px;
   margin-bottom: 30px;
-
+   color: var(--small-text-color);
 }
 
 .about__img {
   flex: 1;
-  position: relative;   /* IMPORTANT */
+  position: relative;
 }
-
-
 
 .about__wrapper {
   display: flex;
-  align-items: flex-start; /* aligns image with choose items */
+  align-items: flex-start;
   gap: 3rem;
 }

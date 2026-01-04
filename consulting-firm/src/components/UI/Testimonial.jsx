@@ -39,18 +39,19 @@ const TestimonialItem = ({ content, name, role, img }) => {
 };
 
 const Testimonial = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    pauseOnHover: true,
-    swipeToSlide: true,
-    adaptiveHeight: true, // Smoothly adjusts slider height
-  };
+const settings = {
+  dots: true,
+  arrows: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  pauseOnHover: true,
+  swipeToSlide: true,
+  adaptiveHeight: false,
+};
 
   const testimonialData = [
     {

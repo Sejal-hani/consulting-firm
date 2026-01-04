@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/About.css";
-import aboutImg from "../../images/about-img.png";
+import aboutImg from "../../images/about-img01.png";
 
 const chooseData = [
   {
