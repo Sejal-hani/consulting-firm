@@ -1,0 +1,222 @@
+.hero__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__content, 
+.hero__img{
+    width: 50%;
+}
+
+.hero__content{
+    padding-top: 40px;
+}
+
+.hero__content h2 {
+    font-size: 3rem;
+    line-height: 65px;
+    color: var(--text-color);
+}
+
+/* 🔥 restore special brand color */
+.hero__content h2.highlight {
+    color: var(--primary-color);
+}
+
+.hero__content p{
+    margin-top: 40px;
+    font-size : 1.1rem;
+    color: var(--text-color);
+} 
+
+.highlight{
+    color: var(--primary-color);
+}
+
+.hero__btns{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+/* 🔧 FIX: buttons visible in both themes */
+.primary__btn, 
+.secondary__btn{
+    padding: 0.6rem 1.5rem;
+    border:none;
+    outline:none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    color: var(--link-active);
+}
+
+.primary__btn,
+.secondary__btn {
+  position: relative;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  overflow: hidden;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.primary__btn::before,
+.secondary__btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--btn-hover-bg);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.primary__btn:hover::before,
+.secondary__btn:hover::before {
+  transform: translateY(0);
+}
+
+.primary__btn:hover,
+.secondary__btn:hover {
+  color: var(--btn-hover-text);
+  transform: translateY(-4px);
+}
+
+body.light {
+  --btn-hover-bg: var(--primary-bg);
+  --btn-hover-text: var(--primary-color);
+  --border-color: #ddd;
+}
+
+body.dark {
+  --btn-hover-bg: rgba(255, 255, 255, 0.08);
+  --btn-hover-text: #fff;
+  --border-color: rgba(255, 255, 255, 0.2);
+}
+
+.primary__btn:active,
+.secondary__btn:active {
+  transform: translateY(-1px);
+}
+
+.primary__btn:active,
+.secondary__btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* primary */
+.primary__btn{
+    background: var(--secondary-bg);
+    border:1px solid var(--link-active);
+}
+
+/* secondary */
+.secondary__btn{
+    background: var(--primary-bg);
+}
+
+/* 🔧 FIX: sync image transition with background */
+.hero__image{
+    width: 100%;
+    transition: opacity 0.0s ease;
+}
+
+body.dark .hero__img img {
+    height: 75%;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+body {
+  transition: color 0.2s ease;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a button {
+  cursor: pointer;
+}
+
+.hero__img {
+    margin-top: 45px;
+}
+
+/* ================================================= */
+/* === ADDED FOR TABLET (<= 992px) ================= */
+/* ================================================= */
+
+@media only screen and (max-width: 992px) {
+
+  .hero__wrapper{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__content,
+  .hero__img{
+    width: 100%;
+  }
+
+  .hero__content{
+    padding-top: 20px;
+  }
+
+  .hero__content h2{
+    font-size: 2.4rem;
+    line-height: 55px;
+  }
+
+  .hero__btns{
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+
+  .hero__img{
+    margin-top: 30px;
+  }
+
+  body.dark .hero__img img{
+    margin-left: 0;
+    height: 65%;
+  }
+}
+
+/* ================================================= */
+/* === ADDED FOR MOBILE (<= 576px) ================= */
+/* ================================================= */
+
+@media only screen and (max-width: 576px) {
+
+  .hero__content h2{
+    font-size: 1.9rem;
+    line-height: 45px;
+  }
+
+  .hero__btns{
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .primary__btn,
+  .secondary__btn{
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero__img{
+    margin-top: 25px;
+  }
+}
