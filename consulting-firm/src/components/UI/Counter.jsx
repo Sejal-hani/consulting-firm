@@ -4,16 +4,15 @@ import "../../styles/Counter.css";
 const counterData = [
   {
     number: "150+",
-text: "Trusted Clients",
-
+    text: "Trusted Clients",
   },
   {
     number: "50+",
-text: "Active Engagements",
+    text: "Active Engagements",
   },
   {
     number: "300+",
-text: "Projects Delivered",
+    text: "Projects Delivered",
   },
 ];
 

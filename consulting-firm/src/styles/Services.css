@@ -2,21 +2,17 @@
   text-align: center;
   margin-bottom: 70px;
 }
+
 .services__top-content h3 {
   color: var(--primary-color) !important;
 }
 
-
 .services__top-content .subtitle {
-  margin-bottom: 6px; /* reduce gap below "Our Services" */
+  margin-bottom: 6px;
 }
 
 .services__top-content h2 {
-  margin-top: 0;      /* remove default top margin */
-}
-
-
-.services__top-content h2 {
+  margin-top: 0;
   margin-bottom: 6px;
 }
 
@@ -41,9 +37,10 @@ body.light .services__top-content h3 {
   flex-wrap: wrap;
   gap: 15px;
 }
+
 .services__item {
-  position: relative;          /* REQUIRED for animation layers */
-  overflow: hidden;            /* hides overlay edges */
+  position: relative;
+  overflow: hidden;
 
   background: var(--card-bg);
   width: 22%;
@@ -73,6 +70,7 @@ body.light .services__top-content h3 {
   transition: opacity 0.3s ease;
   border-radius: inherit;
 }
+
 .services__item:hover {
   transform: translateY(-10px);
   border-color: var(--primary-color);
@@ -98,8 +96,8 @@ body.light .services__item:hover {
 
 body.dark .services__item:hover {
   box-shadow:
-    0 12px 28px rgba(0, 0, 0, 0.75),      /* depth */
-    0 0 0 1px rgba(255, 255, 255, 0.08); /* subtle edge contrast */
+    0 12px 28px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 body.dark .services__item {
@@ -107,28 +105,20 @@ body.dark .services__item {
     0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
-
 .services__item-icon,
 .service__title,
 .services__item .description {
   transition: transform 0.3s ease;
 }
 
-
-
-
-
 body.light .services__item:hover {
   border-color: var(--primary-color);
   box-shadow: 0 14px 32px rgba(129, 106, 255, 0.35);
 }
 
-
 .services__item .description {
   color: var(--text-color);
 }
-
-
 
 .services__item-icon {
   width: 60px;
@@ -155,4 +145,57 @@ body.light .services__item:hover {
 .description {
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+/* ================================================= */
+/* === TABLET (<= 992px) ============================ */
+/* ================================================= */
+
+@media only screen and (max-width: 992px) {
+
+  .services__item-wrapper {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .services__item {
+    width: 45%;          /* 2 cards per row */
+  }
+
+  .services__top-content h3 {
+    font-size: 2rem;
+  }
+}
+
+/* ================================================= */
+/* === MOBILE (<= 576px) ============================ */
+/* ================================================= */
+
+@media only screen and (max-width: 576px) {
+
+  .services__item-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .services__item {
+    width: 85%;          /* centered, premium look */
+    margin: 0 auto;
+  }
+
+  .services__top-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .services__top-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .service__title {
+    font-size: 1.15rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
 }

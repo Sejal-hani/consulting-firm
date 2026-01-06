@@ -84,11 +84,16 @@
   transition: 0.3s;
 }
 
+
 /* Hover effect: Subtle slide-to-right */
-.quick__links-item a:hover {
+.quick__links-item a:hover{
   color: #6c63ff;
   padding-left: 5px;
 }
+.quick__links-item body.dark{
+  color: #379cf6;
+}
+
 
 /* Bottom Copyright Bar */
 .footer__bottom {
@@ -121,3 +126,12 @@
     margin-bottom: 2rem;
   }
 }
+
+/* Infrabyte logo color by theme */
+
+/* Light mode → BLUE */
+body.dark .footer__logo h2 {
+  color:
+  #379cf6;
+}
+

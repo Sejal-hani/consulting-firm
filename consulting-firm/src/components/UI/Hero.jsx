@@ -12,13 +12,10 @@ const Hero = ({ theme }) => {
 
           <div className="hero__content">
             <h2>Future-Ready IT Solutions</h2>
-<h2>That Power Business Growth</h2>
-<h2 className="highlight">Built for Scale & Performance</h2>
-
-
+            <h2>That Power Business Growth</h2>
+            <h2 className="highlight">Built for Scale & Performance</h2>
 
             <div className="hero__btns">
-              {/* Linked to services section */}
               <button 
                 className="primary__btn" 
                 onClick={() => window.location.href = '#services'}
@@ -26,7 +23,6 @@ const Hero = ({ theme }) => {
                 Get Started Now
               </button>
 
-              {/* Fixed: Changed 'blog' to '#about' to scroll correctly */}
               <button 
                 className="secondary__btn"
                 onClick={() => window.location.href = '#about'}
@@ -34,7 +30,7 @@ const Hero = ({ theme }) => {
                 Discover More
               </button>
             </div>
-          </div> {/* Added missing closing tag for hero__content */}
+          </div>
 
           <div className="hero__img">
             <img

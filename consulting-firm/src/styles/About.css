@@ -30,7 +30,7 @@
 }
 
 .choose__us-title{
-  color: var(--heading-color); /* ✅ FIX */
+  color: var(--heading-color);
   font-weight: 500;
   margin-top: 0px;
   font-size: 1rem;
@@ -80,7 +80,7 @@
 .about__content .description{
   margin-top: 9px;
   margin-bottom: 30px;
-   color: var(--small-text-color);
+  color: var(--small-text-color);
 }
 
 .about__img {
@@ -92,4 +92,110 @@
   display: flex;
   align-items: flex-start;
   gap: 3rem;
+}
+
+/* ================================================= */
+/* === ADDED FOR TABLET (<= 992px) ================= */
+/* ================================================= */
+
+@media only screen and (max-width: 992px) {
+
+  .about__wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about__content {
+    padding-top: 40px;
+  }
+
+  .about__content h2,
+  .about__content h3 {
+    text-align: center;
+  }
+
+  /* Center subtitle on tablet */
+.about__content .subtitle {
+  text-align: center;
+  display: block;
+}
+
+
+  .about__content .description {
+    text-align: center;
+  }
+
+  .choose__us-item {
+    padding-right: 0;
+  }
+
+  .about__img img {
+    transform: translate(0, 0);
+  }
+}
+
+/* ================================================= */
+/* === ADDED FOR MOBILE (<= 576px) ================= */
+/* ================================================= */
+
+@media only screen and (max-width: 576px) {
+
+  .about__content {
+    padding-top: 20px;
+  }
+
+  .about__content h2,
+  .about__content h3 {
+    font-size: 1.5em;
+  }
+
+  /* Center subtitle on mobile */
+.about__content .subtitle {
+  text-align: center;
+  display: block;
+}
+
+
+  .choose__us-item {
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+
+  .choose__us-icon {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+  }
+
+  .choose__us-icon i {
+    font-size: 1.5rem;
+  }
+
+  .choose__description {
+    font-size: 0.85rem;
+  }
+
+  /* === MOBILE: CENTER ABOUT ITEMS === */
+
+.choose__us-item {
+  align-items: center;      /* center icon + text block */
+  text-align: center;       /* center text */
+}
+
+.choose__us-icon {
+  margin: 0 auto;           /* center icon box */
+}
+
+.choose__text {
+  align-items: center;      /* center title + desc */
+}
+
+.choose__us-title {
+  text-align: center;
+}
+
+.choose__description {
+  text-align: center;
+}
+
 }

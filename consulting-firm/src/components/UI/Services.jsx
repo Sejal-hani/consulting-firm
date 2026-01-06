@@ -4,24 +4,23 @@ import "../../styles/Services.css";
 const servicesData = [
   {
     icon: "ri-apps-line",
-title: " App Development",
-description: "High-performance iOS, Android, and cross-platform apps built for scale.",
+    title: " App Development",
+    description: "High-performance iOS, Android, and cross-platform apps built for scale.",
   },
   {
     icon: "ri-code-s-slash-line",
-title: " Web Development",
-description: "Secure, scalable web and software solutions for growing businesses.",
+    title: " Web Development",
+    description: "Secure, scalable web and software solutions for growing businesses.",
   },
   {
     icon: "ri-computer-line",
-title: "AI & IT Consulting",
-description: "Secure, scalable web and software solutions for growing businesses.",
+    title: "AI & IT Consulting",
+    description: "Secure, scalable web and software solutions for growing businesses.",
   },
-
-    {
+  {
     icon: "ri-bar-chart-line",
-title: "Digital Marketing",
-description: "SEO and performance-driven marketing focused on real growth.",
+    title: "Digital Marketing",
+    description: "SEO and performance-driven marketing focused on real growth.",
   },
 ];
 
@@ -31,10 +30,8 @@ const Services = () => {
       <div className="container">
         <div className="services__top-content">
           <h6 className="subtitle">Our Services</h6>
-         <h2>End-to-End IT Services Designed</h2>
-<h3 className="services__heading">to Scale Your Business</h3>
-
-
+          <h2>End-to-End IT Services Designed</h2>
+          <h3 className="services__heading">to Scale Your Business</h3>
         </div>
 
         <div className="services__item-wrapper">

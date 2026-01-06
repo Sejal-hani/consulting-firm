@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
+
+
 import "./Header.css";
 
 const nav__links = [
@@ -9,31 +11,41 @@ const nav__links = [
   { path: '#projects', display: 'Projects' },
   { path: '#contact', display: 'Careers' },
   { path: '#contact', display: 'Contact us' },
-  
-  
 ];
 
 const Header = ({ theme, toggleTheme }) => {
+  const headerRef = useRef(null);
+  const menuRef = useRef(null);
+
+  const toggleMenu = () => {
+    menuRef.current.classList.toggle('menu__active');
+  };
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <div className="container">
         <div className="nav__wrapper">
 
           <div className="logo">
-            <h2>IT Consulting</h2>
+            <h2>Consulting</h2>
           </div>
 
           {/* Navigation */}
-          <div className="navigation">
+          <div className="navigation" ref={menuRef}>
             <ul className="menu">
-              {nav__links.map((item, index) => (
-                <li className="menu__item" key={index}>
-                  <a href={item.path} className="menu__link">
-                    {item.display}
-                  </a>
-                </li>
-              ))}
-            </ul>
+  {nav__links.map((item, index) => (
+    <li className="menu__item" key={index}>
+      <a
+        href={item.path}
+        className="menu__link"
+        onClick={() => menuRef.current.classList.remove('menu__active')}
+      >
+        {item.display}
+      </a>
+    </li>
+  ))}
+</ul>
+
           </div>
 
           {/* Theme toggle */}
@@ -47,6 +59,11 @@ const Header = ({ theme, toggleTheme }) => {
                 <i className="ri-sun-line"></i> Light Mode
               </span>
             )}
+          </div>
+
+          {/* Mobile menu icon */}
+          <div className="mobile__menu" onClick={toggleMenu}>
+            <i className="ri-menu-line"></i>
           </div>
 
         </div>
