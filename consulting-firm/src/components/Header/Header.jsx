@@ -22,8 +22,7 @@ const Header = ({ theme, toggleTheme }) => {
   };
 
   return (
-    <h1 style={{ color: "red" }}>DEPLOY TEST</h1>
-
+    
     <header className="header" ref={headerRef}>
       <div className="container">
         <div className="nav__wrapper">
@@ -51,6 +50,7 @@ const Header = ({ theme, toggleTheme }) => {
           </div>
 
           {/* Theme toggle */}
+          
           <div className="light__mode" onClick={toggleTheme}>
             {theme === 'light' ? (
               <span>
