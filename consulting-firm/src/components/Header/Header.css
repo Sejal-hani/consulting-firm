@@ -132,17 +132,18 @@ body {
       This should be placed INSIDE the .menu in your React component.
     */
     
+/* show ❌ ONLY when mobile menu is open */
+.navigation.menu__active .menu__close {
+  display: block !important;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10000;
+}
 
-        .menu__close{
-        display: block; /* Make it visible on mobile */
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 1.5rem;
-        color: #fff;
-        cursor: pointer;
-        z-index: 10000; /* Ensure it's on top of everything */
-    }
 
     /* This makes your navigation links white and readable */
     .menu .menu__link{
@@ -150,4 +151,11 @@ body {
       font-weight: 500;
       font-size: 1rem;
     }
+}
+
+/* 🔒 ABSOLUTE DESKTOP KILL SWITCH */
+@media only screen and (min-width: 993px) {
+  .menu__close {
+    display: none !important;
+  }
 }

@@ -66,11 +66,9 @@
 }
 
 /* 
-  HERE IS THE CHANGE: 
-  This rule now triggers the line animation on EITHER hover OR when the card is active.
+  THIS RULE IS NOW GLOBAL FOR HOVER ONLY (DESKTOP + MOBILE)
 */
-.team__item:hover .team__details::after,
-.team__item.is-active .team__details::after {
+.team__item:hover .team__details::after {
   transform: translateX(-50%) scaleX(1);
   opacity: 1;
 }
@@ -188,6 +186,14 @@ body.dark .team__item:hover {
   .team__item.is-active {
     transform: translateY(-10px);
     border-color: rgba(129, 106, 255, 0.8);
+  }
+
+  /* 
+    THIS RULE IS NOW INSIDE THE MEDIA QUERY FOR .is-active ONLY
+  */
+  .team__item.is-active .team__details::after {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
   }
 
   body.light .team__item.is-active {
